@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    <img class="logo" src="assets/angular.png" alt="logo_angular">Angular 
+    + 
+    <img class="logo" src="assets/truffle.png" alt="logo_truffle">Truffle = DApp</h1>
+</div>
+<form>
+  <div class="container">
+    <div class="tab">
+      <b> Direccion</b>{{ direccion }} 
+      <span class="tab-right">
+        <b>Balance</b>{{ balance | currency: 'ETH ' }}
+      </span>
+    </div>
+
+    <div class="message success" *ngIf="transaccionHecha && exito">
+      <b>Tranascción realizada exitosamente</b> 
+    </div>
+
+    <div class="message error" *ngIf="transaccionHecha && !exito">
+      <b>Hubo un error en la transacción</b> 
+    </div>
+    
+    <hr>
+
+    <label for="destinoTransaccion"><b>Transferir a </b></label>
+    <input type="text" class="inputfield" placeholder="Destino de la transacción" [(ngModel)]="destinoTransaccion" name="destinoTransaccion" required>
+
+    <label for="monto" class="padding-left"><b>Monto en Ether (ETH)</b></label>
+    <input type="text" class="inputfield" placeholder="Monto" [(ngModel)]="monto" name="monto" required>
+
+    <hr>
+    
+    <button type="reset" class="trfbtn resetbtn">Reset</button>&nbsp;&nbsp;
+    <button type="submit" class="trfbtn" (click)="transferirEther($event)">Transferir Ether</button>&nbsp;&nbsp;
+  </div>
+</form>
