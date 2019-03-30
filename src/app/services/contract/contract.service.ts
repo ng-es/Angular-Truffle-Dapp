@@ -24,7 +24,7 @@ export class ContractService {
     window.web3 = new Web3(this.web3Provider);
   }
 
-  verInformacionCuenta() {
+  seeAccountInfo() {
     return new Promise((resolve, reject) => {
       window.web3.eth.getCoinbase((err, account) => {
 
@@ -32,11 +32,11 @@ export class ContractService {
           window.web3.eth.getBalance(account, (error, balance) => {
             if (error === null) {
               return resolve({
-                cuentaOrigen: account,
+                originAccount: account,
                 balance: (window.web3.utils.fromWei(balance, 'ether'))
               });
             } else {
-              return reject({cuentaOrigen: 'error', balance: 0});
+              return reject({originAccount: 'error', balance: 0});
             }
           });
         }
@@ -44,7 +44,7 @@ export class ContractService {
     });
   }
 
-  transferirEther(cuentaOrigen, cuentaDestino, monto) {
+  trasnferEther(originAccount, destinyAccount, amount) {
     const that = this;
 
     return new Promise((resolve, reject) => {
@@ -53,10 +53,10 @@ export class ContractService {
 
       paymentContract.deployed().then((instance) => {
           return instance.nuevaTransaccion(
-            cuentaDestino,
+            destinyAccount,
             {
-              from: cuentaOrigen,
-              value: window.web3.utils.toWei(monto, 'ether')
+              from: originAccount,
+              value: window.web3.utils.toWei(amount, 'ether')
             });
         }).then((status) => {
           if (status) {
@@ -65,7 +65,7 @@ export class ContractService {
         }).catch((error) => {
           console.log(error);
 
-          return reject('Error in transferEther service call');
+          return reject('Error transfering Ether ');
         });
     });
   }

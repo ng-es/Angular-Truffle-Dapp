@@ -1,0 +1,35 @@
+<mdc-top-app-bar #demoappbar fixed [mdcElevation]="4" [fixedAdjustElement]="mainContent">
+	<mdc-top-app-bar-row>
+		<mdc-top-app-bar-section align="start" title="Angular Ðapp">
+      <button mdcIconButton mdcTopAppBarNavIcon icon="menu"  (click)="demoModal.open = !demoModal.open"></button>
+    </mdc-top-app-bar-section>
+    <mdc-top-app-bar-section align="end">
+      <mdc-icon mdcTopAppBarActionItem routerLink="/account">person</mdc-icon>
+
+    </mdc-top-app-bar-section>
+	</mdc-top-app-bar-row>
+</mdc-top-app-bar>
+<div class="main" #mainContent>
+  <div class="content">
+    <div class="layout__row--no-wrap demo-drawer-app">
+      <mdc-drawer drawer="modal" #demoModal open>
+        <mdc-drawer-header>
+          <h3 mdcDrawerTitle>Angular + Truffle = 💓 ÐAPP</h3>
+          <h6 mdcDrawerSubtitle>Escale like a pro!</h6>
+        </mdc-drawer-header>
+        <mdc-drawer-content>
+          <mdc-list useActivatedClass>
+              <a mdc-list-item routerLink="/home">
+                <mdc-icon mdcListItemGraphic>favorite</mdc-icon>Home
+              </a>
+
+              <a mdc-list-item routerLink="/">
+                <mdc-icon mdcListItemGraphic>money</mdc-icon>Transaction
+              </a>
+          </mdc-list>
+        </mdc-drawer-content>
+      </mdc-drawer>
+    </div>
+  </div>
+</div>
+

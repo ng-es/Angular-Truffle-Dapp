@@ -1,0 +1,34 @@
+<div class="body">
+  <mdc-card class="transaction" [mdcElevation]="2">
+      &nbsp;
+      <section class="header" style="text-align:center">
+          <h4>Your address is:</h4>
+          <h6>{{ direction}} </h6>
+          <h4>Balance:</h4>
+          <h5>{{balance}} ETH</h5>
+        </section>
+        <form [formGroup]="transactionForm">
+        <mdc-form-field fluid>
+            <mdc-text-field type="text" label="Transfer Destiny" outlined class="demo-shaped-text-field--outline" required id="sendadress"   formControlName="sendadress"></mdc-text-field>
+            <mdc-helper-text persistent validation *ngIf="formErrors.sendadress"> {{ formErrors.sendadress }} </mdc-helper-text>
+          </mdc-form-field>
+     &nbsp;
+     <mdc-form-field fluid>
+        <mdc-text-field type="text" min=0 label="Ether Amout(ETH)" outlined class="demo-shaped-text-field--outline" required id="amount" formControlName="amount">
+        </mdc-text-field>
+        <mdc-helper-text persistent validation *ngIf="formErrors.amount"> {{ formErrors.amount }} </mdc-helper-text>
+    </mdc-form-field>
+  </form>
+
+
+      &nbsp;
+      <div class="button-container">
+        <button mdc-button secondary unelevated  class="big-round-shape-button" [disabled]="!transactionForm.valid"(click)="transferEth($event)"><mdc-icon *ngIf="!transactionForm.valid">lock</mdc-icon><mdc-icon *ngIf="transactionForm.valid">input</mdc-icon>&nbsp;Transfer Ether</button>
+        &nbsp;
+        <button mdc-button type="reset" >Reset</button>
+        &nbsp;
+      </div>
+      &nbsp;
+  </mdc-card>
+  </div>
+

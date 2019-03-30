@@ -1,0 +1,353 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+$mdc-theme-primary: #5E464D; // primary color
+$mdc-theme-secondary: #43DCC1; // secondary color
+$mdc-theme-background: #f5f5f7;
+
+:root{
+--success: #d5dfda;
+--info: #00b8d8;
+}
+
+@import "~@angular-mdc/theme/material";
+@import "~@angular-mdc/theme/material";
+
+.altcolor{
+color : #ea605c;
+}
+body {
+  margin: 0;
+  background-color: $mdc-theme-background;
+}
+
+.error {
+  height: calc(100vh - 3.75rem);
+  display: flex;
+}
+
+.error__content {
+  padding: 0 0.9375rem;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  h2 {
+    color: #CACEDB;
+    font-weight: 700;
+    font-size: 3.75rem;
+    margin-bottom: 1.5625rem;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 2.1875rem;
+    margin-bottom: 0.625rem;
+  }
+  p {
+    color: #cc7722;
+  }
+}
+.alert-danger {
+  color: #fad7de;
+  background-color: #c4183c;
+  .alert-link {
+    color: #fad7de;
+  }
+}
+.alert-success {
+  color: #d7fae9;
+  background-color: #17c671;
+  .alert-link {
+    color: #d7fae9;
+  }
+}
+.alert-info {
+  color: #cef8ff;
+  background-color: #00b8d8;
+  .alert-link {
+    color: #cef8ff;
+  }
+}
+
+.demo-main {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  overflow: auto;
+}
+
+.demo-controls-container {
+  @include mdc-elevation(4);
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+}
+
+.demo-content {
+  padding: 15px;
+  margin: 15px;
+
+  &__headline {
+    @include mdc-typography(headline6);
+
+    margin-top: .1em;
+    margin-bottom: .3em;
+  }
+}
+
+.demo-content--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-content--row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px 0 10px 0;
+}
+
+.standard-image-list {
+  @include mdc-image-list-aspect(1.5); // Images are 3:2
+  @include mdc-image-list-standard-columns(4);
+}
+
+.masonry-image-list {
+  @include mdc-image-list-masonry-columns(4);
+}
+
+@media (max-width: 599px) {
+  .standard-image-list {
+    @include mdc-image-list-standard-columns(3);
+  }
+
+  .masonry-image-list {
+    @include mdc-image-list-masonry-columns(3);
+  }
+}
+
+
+.demo-card {
+  width: 350px;
+  margin: 28px;
+}
+
+.demo-card__primary {
+  padding: 1rem;
+}
+
+.demo-card__title {
+  margin: 0;
+}
+
+.demo-card__subtitle {
+  @include mdc-theme-prop(color, text-secondary-on-background);
+
+  margin: 0;
+}
+
+.demo-card__secondary {
+  @include mdc-theme-prop(color, text-secondary-on-background);
+
+  padding: 0 1rem 8px 1rem;
+}
+
+.demo-card-article {
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.demo-card-article-group-heading {
+  @include mdc-theme-prop(color, text-secondary-on-light);
+
+  padding: 8px 16px;
+}
+
+.demo-card-article__title {
+  margin: 0 0 4px 0;
+}
+
+.demo-card-article__snippet {
+  @include mdc-theme-prop(color, text-secondary-on-light);
+
+  margin: 0;
+}
+
+.demo-card--photo {
+  width: 200px;
+}
+
+.demo-card__media {
+  background-image: url(https://material-components-web.appspot.com/images/1-1.jpg);
+}
+
+.demo-card__media--16-9 {
+  background-image: url(https://material-components-web.appspot.com/images/16-9.jpg);
+}
+
+.demo-card__media-content--with-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.demo-card__media-title {
+  padding: 8px 16px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  color: white;
+}
+
+.demo-card--music {
+  @include mdc-card-shape-radius(24px 4px);
+
+  @include mdc-rtl {
+    @include mdc-card-shape-radius(4px 24px);
+  }
+}
+
+.demo-card__music-row {
+  display: flex;
+  border-top-left-radius: inherit;
+
+  @include mdc-rtl {
+    border-top-left-radius: 0;
+    border-top-right-radius: inherit;
+  }
+}
+
+.demo-card__media--music {
+  width: 110px;
+  border-top-left-radius: inherit;
+
+  @include mdc-rtl {
+    border-top-left-radius: 0;
+    border-top-right-radius: inherit;
+  }
+}
+
+.demo-card__music-info {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+}
+
+.demo-card__action-buttons--text-only {
+  margin-left: 8px;
+}
+.demo-layout__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-layout__row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.demo-layout__row > * {
+  margin-right: 24px;
+  margin-top: 12px;
+}
+
+.test-dialog--form {
+  @include mdc-dialog-min-width(580px);
+
+  @media (max-width: 1239px) {
+    @include mdc-dialog-min-width(280px);
+  }
+}
+
+.mdc-button.big-round-shape-button {
+  @include mdc-button-shape-radius(8px);
+}
+
+.mdc-button.thick-outline-button {
+  @include mdc-button-outline-width(4px);
+}
+
+.demo-button-ink-color {
+  @include mdc-button-container-fill-color($material-color-purple-500);
+  @include mdc-button-icon-color(white);
+  @include mdc-button-ink-color(white);
+  @include mdc-states(white);
+}
+
+.demo-button-icon-color {
+  @include mdc-button-icon-color(white);
+}
+
+.mdc-fab.red800Fab {
+  @include mdc-fab-accessible($material-color-red-800);
+}
+
+.mdc-fab.yellow800Fab {
+  @include mdc-fab-accessible($material-color-yellow-800);
+}
+
+.mdc-fab.purple500Fab {
+  @include mdc-fab-accessible($material-color-purple-500);
+}
+
+.mdc-fab.blackFab {
+  @include mdc-fab-accessible(black);
+}
+
+.demo-fab-extended-fluid {
+  @include mdc-fab-extended-fluid;
+}
+
+.demo-fab-shaped--one {
+  @include mdc-fab-shape-radius(28px 0);
+}
+
+.demo-fab-shaped--two {
+  @include mdc-fab-shape-radius(8px);
+}
+
+.demo-fab-shape-radius {
+  @include mdc-fab-shape-radius(50% 0 0 0);
+}
+
+.demo-fab-extended-shape-radius {
+  @include mdc-fab-extended-shape-radius(25%);
+}
+.shrine-logo {
+  width: 90px;
+  height: 90px;
+  fill: $mdc-theme-primary;
+}
+
+.demo-text-field-custom-colors:not(.mdc-text-field--invalid) {
+  $idle-border: rgba(blue, .38);
+  $hover-border: rgba(blue, .6);
+  $focused-border: rgba(blue, 1);
+
+  @include mdc-text-field-bottom-line-color($idle-border);
+  @include mdc-text-field-hover-bottom-line-color($hover-border);
+  @include mdc-text-field-line-ripple-color($focused-border);
+  @include mdc-text-field-ink-color(black);
+  @include mdc-text-field-label-color(rgba(blue, .5));
+  @include mdc-text-field-outline-color($idle-border);
+  @include mdc-text-field-hover-outline-color($hover-border);
+  @include mdc-text-field-focused-outline-color($focused-border);
+  @include mdc-text-field-helper-text-color($idle-border);
+  @include mdc-text-field-textarea-stroke-color($idle-border);
+  @include mdc-text-field-icon-color($hover-border);
+
+  &.mdc-text-field--focused {
+    @include mdc-text-field-label-color(rgba(blue, .87));
+    @include mdc-text-field-icon-color($focused-border);
+  }
+}
+
+.demo-shaped-text-field {
+  @include mdc-text-field-shape-radius(50%);
+}
+
+.demo-shaped-text-field--outline {
+  @include mdc-text-field-outline-shape-radius(50%);
+}

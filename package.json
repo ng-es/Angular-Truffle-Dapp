@@ -1,7 +1,17 @@
 {
   "name": "angulartruffledapp",
-  "author": {"name": "@ng-es", "url": "https://medium.com/ngesyfirebase"},
-   "contributors": [{"name": "@AntonioCardenas"},{"name": "@AbnerGarcia96"}],
+  "author": {
+    "name": "@ng-es",
+    "url": "https://medium.com/ngesyfirebase"
+  },
+  "contributors": [
+    {
+      "name": "@AntonioCardenas"
+    },
+    {
+      "name": "@AbnerGarcia96"
+    }
+  ],
   "version": "1.1.0",
   "license": "MIT",
   "scripts": {
@@ -14,6 +24,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-mdc/web": "^0.44.0",
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
@@ -23,12 +34,12 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
-    "rxjs": "~6.3.3",
-    "tslib": "^1.9.0",
-    "zone.js": "~0.8.26",
     "ethers": "^4.0.20",
+    "rxjs": "~6.3.3",
     "truffle-contract": "^4.0.1",
-    "web3": "1.0.0-beta.37"
+    "tslib": "^1.9.0",
+    "web3": "1.0.0-beta.37",
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "^7.4.1",
@@ -48,6 +59,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.11.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
