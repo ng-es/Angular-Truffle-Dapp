@@ -1,5 +1,5 @@
 #  Angular + Truffle = 💓 ÐAPPS
-This  Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts
+This  Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts and scale you app with beautiful material design 
 
 
 This  was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
@@ -44,5 +44,5 @@ Note the mnemonic 12-word phrase printed on startup, you will need it later.
 |-------|----------|
 | `Module not found: Error: Can't resolve '../../../../build/contracts/Payment.json'` during `ng serve` | Run `truffle compile` |
 | `Error: the tx doesn't have the correct nonce.` in MetaMask | Reset MetaMask: Settings -> Reset Account |
-| `Error getting balance; see log.` in UI, with `Error: MetaCoin has not been deployed to detected network (network/artifact mismatch)` in browser console | Ensure you have started ganache, run `truffle migrate` and configured MetaMask to point to ganache | `Error: i cannot see my account or balance` Ensure you are logged in metamask and refresh | If you have a custom rcp in ganache you can change the dir in `src/app/contract/contract.service.ts line21 with the your dir `|
+| `Error getting balance; see log.` in UI, with `Error: MetaCoin has not been deployed to detected network (network/artifact mismatch)` in browser console | Ensure you have started ganache, run `truffle migrate` and configured MetaMask to point to ganache | `Error: i cannot see my account or balance` Ensure you are logged in metamask and refresh | If you have a custom rcp in ganache you can change the dir in `src/app/contract/contract.service.ts line21 with your dir `| `Error: [ethjs-rpc] rpc error with payload` in Metamask | You may need upadate Ganache and restart metamask because some old vesions give 0 gas and the transaction is mark as  underpriced |
 

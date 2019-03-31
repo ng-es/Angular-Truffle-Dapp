@@ -12,7 +12,7 @@
       "name": "@AbnerGarcia96"
     }
   ],
-  "version": "1.3.0",
+  "version": "1.5.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
