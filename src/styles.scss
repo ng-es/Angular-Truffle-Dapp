@@ -351,3 +351,6 @@ body {
 .demo-shaped-text-field--outline {
   @include mdc-text-field-outline-shape-radius(50%);
 }
+.custom-snackbar--label-ink-color {
+  @include mdc-snackbar-label-ink-color($material-color-grey-50);
+}

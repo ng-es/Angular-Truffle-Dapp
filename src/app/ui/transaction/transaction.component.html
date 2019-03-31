@@ -9,12 +9,12 @@
         </section>
         <form [formGroup]="transactionForm">
         <mdc-form-field fluid>
-            <mdc-text-field type="text" label="Transfer Destiny" outlined class="demo-shaped-text-field--outline" required id="sendadress"   formControlName="sendadress"></mdc-text-field>
-            <mdc-helper-text persistent validation *ngIf="formErrors.sendadress"> {{ formErrors.sendadress }} </mdc-helper-text>
+            <mdc-text-field type="text" label="Transfer Destiny" outlined class="demo-text-field--outline" required id="sendaddress"   formControlName="sendaddress"></mdc-text-field>
+            <mdc-helper-text persistent validation *ngIf="formErrors.sendaddress"> {{ formErrors.sendaddress }} </mdc-helper-text>
           </mdc-form-field>
      &nbsp;
      <mdc-form-field fluid>
-        <mdc-text-field type="text" min=0 label="Ether Amout(ETH)" outlined class="demo-shaped-text-field--outline" required id="amount" formControlName="amount">
+        <mdc-text-field type="text" min=0 label="Ether Amout(ETH)" outlined class="demo-text-field--outline" required id="amount" formControlName="amount">
         </mdc-text-field>
         <mdc-helper-text persistent validation *ngIf="formErrors.amount"> {{ formErrors.amount }} </mdc-helper-text>
     </mdc-form-field>
