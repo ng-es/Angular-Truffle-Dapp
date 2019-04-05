@@ -2,6 +2,7 @@
 
 NOTES.md
 functions/*
+/build
 
 # compiled output
 /dist

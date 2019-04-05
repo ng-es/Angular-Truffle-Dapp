@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import contract from 'truffle-contract';
+import { MdcSnackbar } from '@angular-mdc/web';
 
 declare let require: any;
 const Web3 = require('web3');
@@ -10,11 +11,12 @@ declare let window: any;
 @Injectable({
   providedIn: 'root'
 })
+
 export class ContractService {
   private web3Provider: null;
   private contracts: {};
 
-  constructor() {
+  constructor(private snackbar: MdcSnackbar) {
     if (typeof window.web3 !== 'undefined') {
       this.web3Provider = window.web3.currentProvider;
     } else {
@@ -27,18 +29,21 @@ export class ContractService {
   seeAccountInfo() {
     return new Promise((resolve, reject) => {
       window.web3.eth.getCoinbase((err, account) => {
-
         if (err === null) {
-          window.web3.eth.getBalance(account, (error, balance) => {
-            if (error === null) {
-              return resolve({
-                originAccount: account,
-                balance: (window.web3.utils.fromWei(balance, 'ether'))
-              });
-            } else {
-              return reject({originAccount: 'error', balance: 0});
-            }
-          });
+          if (account === null) {
+            return reject({name: 'account'});
+          } else {
+            window.web3.eth.getBalance(account, (error, balance) => {
+              if (error === null) {
+                return resolve({
+                  originAccount: account,
+                  balance: (window.web3.utils.fromWei(balance, 'ether'))
+                });
+              } else {
+                return reject({name: 'balance'});
+              }
+            });
+          }
         }
       });
     });
@@ -65,8 +70,18 @@ export class ContractService {
         }).catch((error) => {
           console.log(error);
 
-          return reject('Error transfering Ether ');
+          return reject('Error transfering Ether');
         });
     });
+  }
+
+  failure(message: string) {
+    const snackbarRef = this.snackbar.open(message);
+    snackbarRef.afterDismiss().subscribe(reason => {});
+  }
+
+  succes() {
+    const snackbarRef = this.snackbar.open('Transaction complete successfuly');
+    snackbarRef.afterDismiss().subscribe(reason => {});
   }
 }

@@ -40,66 +40,46 @@ export class TransactionComponent implements OnInit {
 // tslint:disable-next-line: no-shadowed-variable
   constructor(private frb: FormBuilder, private contract: ContractService, private snackbar: MdcSnackbar) {
     contract.seeAccountInfo().then((value: any) => {
-    this.direction = value.originAccount;
-    this.balance = value.balance;
+      this.direction = value.originAccount;
+      this.balance = value.balance;
+    }).catch((error: any) => {
+      contract.failure('Could\'t get the account data, please check if metamask is running correctly and refresh the page');
     });
   }
 
   ngOnInit() {
     this.buildForm();
   }
+
   buildForm() {
     this.transactionForm = this.frb.group({
       sendaddress: ['', [
-      Validators.required,
-      Validators.minLength(42),
-       ]],
+          Validators.required,
+          Validators.minLength(42),
+        ]
+      ],
       amount : ['', [
-        Validators.required,
-        Validators.pattern(/^[+-]?\d+(\.\d+)?$/),
-     ]],
+          Validators.required,
+          Validators.pattern(/^[+-]?\d+(\.\d+)?$/),
+        ]
+      ],
     });
     this.transactionForm.valueChanges.subscribe((data) => this.onValueChanged(data));
     this.onValueChanged();
   }
 
-  reset() {
-  }
+  reset() {}
 
   transferEth(e) {
-  this.address = this.transactionForm.value.sendaddress;
-  this.amount = this.transactionForm.value.amount;
+    this.address = this.transactionForm.value.sendaddress;
+    this.amount = this.transactionForm.value.amount;
 
-  this.contract.trasnferEther(this.direction, this.address, this.amount).then((r) => {
-    this.showMessage(true, 5000);
-  }).catch((e) => {
-    this.showMessage(false, 5000);
-    this.failure();
-  });
-  }
-
-  showMessage(exito, duracion) {
-    this.transactionDone = true;
-    this.success = exito;
-    this.succes();
-    setTimeout(() => {
-        this.success = !exito;
-        this.transactionDone = false;
-    }, duracion);
-  }
-  failure() {
-    const snackbarRef = this.snackbar.open('Transaction failed.');
-    snackbarRef.afterDismiss().subscribe(reason => {
+    this.contract.trasnferEther(this.direction, this.address, this.amount).then((r) => {
+      this.contract.succes();
+    }).catch((e) => {
+      this.contract.failure('Transaction failed');
     });
   }
-
-
-  succes() {
-    const snackbarRef = this.snackbar.open('Transaction complete successfuly.');
-    snackbarRef.afterDismiss().subscribe(reason => {
-    });
-  }
-
 
   onValueChanged(data?: any) {
     if (!this.transactionForm) { return; }
