@@ -2,7 +2,8 @@
 
 NOTES.md
 functions/*
-/build
+build/contracts/Migrations.json
+build/contracts/Payment.json
 
 # compiled output
 /dist
@@ -44,4 +45,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
