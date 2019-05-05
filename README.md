@@ -23,7 +23,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 2. Download the box.
   ```bash
-  truffle unbox Quintor/angular-truffle-box
+  truffle unbox ng-es/angulartruffledapp
   ```
 
 3. Run your Ethereum client. For Ganache CLI:
