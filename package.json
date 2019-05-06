@@ -34,11 +34,11 @@
     "@angular/platform-browser-dynamic": "^7.2.14",
     "@angular/router": "^7.2.14",
     "core-js": "^2.5.4",
-    "ethers": "^4.0.27",
+    "ethers": "^4.0.20",
+    "truffle-contract": "^4.0.1",
+    "web3": "1.0.0-beta.37",
     "rxjs": "~6.3.3",
-    "truffle-contract": "^4.0.14",
     "tslib": "^1.9.0",
-    "web3": "^1.0.0-beta.54",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
