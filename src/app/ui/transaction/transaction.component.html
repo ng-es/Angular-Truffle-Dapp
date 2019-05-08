@@ -25,7 +25,7 @@
       <div class="button-container">
         <button mdc-button secondary unelevated  class="big-round-shape-button" [disabled]="!transactionForm.valid"(click)="transferEth($event)"><mdc-icon *ngIf="!transactionForm.valid">lock</mdc-icon><mdc-icon *ngIf="transactionForm.valid">input</mdc-icon>&nbsp;Transfer Ether</button>
         &nbsp;
-        <button mdc-button type="reset" >Reset</button>
+        <button mdc-button (click)="reset()" >Reset</button>
         &nbsp;
       </div>
       &nbsp;

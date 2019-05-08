@@ -39,7 +39,7 @@ export class TransactionComponent implements OnInit {
 
 // tslint:disable-next-line: no-shadowed-variable
   constructor(private frb: FormBuilder, private contract: ContractService, private snackbar: MdcSnackbar) {
-    contract.seeAccountInfo().then((value: any) => {
+   contract.seeAccountInfo().then((value: any) => {
       this.direction = value.originAccount;
       this.balance = value.balance;
     }).catch((error: any) => {
@@ -68,7 +68,9 @@ export class TransactionComponent implements OnInit {
     this.onValueChanged();
   }
 
-  reset() {}
+  reset() {
+    this.transactionForm.reset();
+  }
 
   transferEth(e) {
     this.address = this.transactionForm.value.sendaddress;
@@ -76,6 +78,7 @@ export class TransactionComponent implements OnInit {
 
     this.contract.trasnferEther(this.direction, this.address, this.amount).then((r) => {
       this.contract.succes();
+// tslint:disable-next-line: no-shadowed-variable
     }).catch((e) => {
       this.contract.failure('Transaction failed');
     });
