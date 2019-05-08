@@ -16,17 +16,20 @@ declare let window: any;
 export class ContractService {
   private web3Provider: null;
   private contracts: {};
+  public compatible: boolean;
   private accounts: string[];
   public accountsObservable = new Subject<string[]>();
 
   constructor(private snackbar: MdcSnackbar) {
     if (typeof window.web3 !== 'undefined') {
       this.web3Provider = window.web3.currentProvider;
+      this.compatible = true;
     } else {
-      console.log('Un parece que no estas conectado');
+      console.log('Sorry you are not connect');
       Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
-      this.web3Provider = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/ca2b12f732ef47fcb6b76223b39f8cf3'));
-      // Cambiarlo con la private key propia de infura.io
+      this.web3Provider = new Web3.providers.HttpProvider('http://ropsten.infura.io/v3/ca2b12f732ef47fcb6b76223b39f8cf3');
+      // Change to your own private key in infura.io
+      this.compatible = false;
     }
 
     window.web3 = new Web3(this.web3Provider);
