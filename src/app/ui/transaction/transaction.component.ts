@@ -17,6 +17,7 @@ export class TransactionComponent implements OnInit {
   amount: string;
   balance: string;
   success: boolean;
+  compatible: boolean;
   transactionDone: boolean;
 
   transactionForm: FormGroup;
@@ -39,6 +40,7 @@ export class TransactionComponent implements OnInit {
 
 // tslint:disable-next-line: no-shadowed-variable
   constructor(private frb: FormBuilder, private contract: ContractService, private snackbar: MdcSnackbar) {
+   this.compatible = contract.compatible;
    contract.seeAccountInfo().then((value: any) => {
       this.direction = value.originAccount;
       this.balance = value.balance;
