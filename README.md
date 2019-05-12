@@ -36,7 +36,10 @@ Note the mnemonic 12-word phrase printed on startup, you will need it later.
   ```bash
   truffle compile && truffle migrate
   ```
-
+5. Change the port  in truffle-config.js
+ ```
+ change the port in truffle-config.js 8545 in windows the port is 7545 but in linux the defaul port is  8545
+  ```
 
 * __Common errors and their solutions__
 
