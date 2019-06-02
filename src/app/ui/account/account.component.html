@@ -1,10 +1,15 @@
-<div class="body">
+<div class="body" *ngIf="balance !== undefined">
     <mdc-card class="account" [mdcElevation]="2">
 
 <div style="text-align:center">
     <section class="header">
+        &nbsp;
+        &nbsp;
+
+        <img [src]="data" class="profile" />
         <h4>Your address is:</h4>
         <h6>{{ direction }} </h6>
+        <mdc-list-divider></mdc-list-divider>
         <h4>Balance:</h4>
         <h5>{{balance}} ETH</h5>
       </section>
@@ -12,3 +17,25 @@
 
     </mdc-card>
     </div>
+    <div class="body" *ngIf="balance == undefined">
+      <mdc-card class="account" [mdcElevation]="2">
+
+  <div style="text-align:center">
+      <section class="header">
+
+          <h3>Web3 enabled browser and secure wallet required.</h3>
+          <h4>Please check if metamask is running correctly and refresh the page</h4>
+          <h5>In order to use Angular Truffle Dapp, please install a secure wallet such as MetaMask.</h5>
+<mdc-list-divider></mdc-list-divider>
+          &nbsp;
+
+          <div class="button-container">
+            &nbsp;
+            <button mdc-button secondary unelevated  class="big-round-shape-button" (click)="navigateTo()"> Get MetaMask</button>
+          </div>
+          &nbsp;
+        </section>
+      </div>
+
+      </mdc-card>
+      </div>
