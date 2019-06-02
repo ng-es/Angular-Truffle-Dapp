@@ -49,3 +49,16 @@ Note the mnemonic 12-word phrase printed on startup, you will need it later.
 | `Error: the tx doesn't have the correct nonce.` in MetaMask | Reset MetaMask: Settings -> Reset Account |
 | `Error getting balance; see log.` in UI, with `Error: MetaCoin has not been deployed to detected network (network/artifact mismatch)` in browser console | Ensure you have started ganache, run `truffle migrate` and configured MetaMask to point to ganache | `Error: i cannot see my account or balance` Ensure you are logged in metamask and refresh | If you have a custom rcp in ganache you can change the dir in `src/app/contract/contract.service.ts line21 with your dir `| `Error: [ethjs-rpc] rpc error with payload` in Metamask | You may need upadate Ganache and restart metamask because some old vesions give 0 gas and the transaction is mark as  underpriced |
 
+
+## Code contributions welcome!
+
+1. Fork it
+2. Add new features
+
+```bash
+git checkout -b my-new-feature
+git commit -am 'Add some feature'
+git push origin my-new-feature
+```
+
+3. Create a pull request
