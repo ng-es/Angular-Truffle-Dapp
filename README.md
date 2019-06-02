@@ -2,7 +2,9 @@
 This  Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts and scale you app with beautiful material design 
 
 
-This  was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+This  was generate
+
+d with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
 ## Development server
 
