@@ -1,5 +1,5 @@
 #  Angular + Truffle = 💓 ÐAPPS
-This  Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts and scale you app with beautiful material design 
+This  Trufflebox provides a base for Truffle Framework and Angular DAPP. and you can make transactions between accounts and scale you app with beautiful material design 
 
 
 This  was generate
@@ -25,7 +25,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 2. Download the box.
   ```bash
-  truffle unbox Quintor/angular-truffle-box
+  truffle unbox ng-es/angulartruffledapp
   ```
 
 3. Run your Ethereum client. For Ganache CLI:
