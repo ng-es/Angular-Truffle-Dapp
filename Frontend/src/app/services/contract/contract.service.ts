@@ -25,19 +25,13 @@ export class ContractService {
       this.compatible = true;
     } else {
       this.web3Provider = new Web3.providers.HttpProvider('HTTP://127.0.0.1:7545');
-         // if you are using linix or ganche cli maybe the port is  http://localhost:8545
-
+      // if you are using linix or ganche cli maybe the port is  http://localhost:8545
       //   Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
       //   this.web3Provider = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/Private_key'));
       // Change with your credentials as the test network and private key in infura.io
        }
     window.web3 = new Web3(this.web3Provider);
-    try {
-         this.web3Provider.enable();
-         console.log('web3 enabled');
-       } catch (error) {
-         console.log('could not enable web3');
-       }
+    console.log ('connect');
      }
 
 
