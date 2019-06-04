@@ -5,8 +5,7 @@ import { Subject } from 'rxjs';
 
 declare let require: any;
 const Web3 = require('web3');
-const tokenAbi = require('../../../../build/contracts/Payment.json');
-
+const tokenAbi = require('../../../../../Blockchain/build/contracts/Payment.json');
 declare let window: any;
 
 @Injectable({

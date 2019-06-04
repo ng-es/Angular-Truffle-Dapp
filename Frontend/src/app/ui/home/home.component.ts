@@ -11,5 +11,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  GiveStar() {
+    window.open('https://github.com/ng-es/Angular-Truffle-Dapp');
+  }
 
 }
