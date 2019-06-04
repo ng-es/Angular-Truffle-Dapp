@@ -44,10 +44,12 @@ Note the mnemonic 12-word phrase printed on startup, you will need it later.
   ```
 6. Navigate into the Frontend Directory 
   ```
-  ng serve and enjoy 
+  npm install & ng serve , And lets Buidl 
   ```
-7. If you want to customize 
+7. If you want to customize <===
 ```*First change the contract in Blockchain/contracts or make your own contract and compile and migrate
+```
+```
 *Second change the app/service/contract.service.ts with your builded contract .json and you custom directives and functions
 ``` 
 * __Common errors and their solutions__
