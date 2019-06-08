@@ -1,5 +1,5 @@
 
-![Logo](https://firebasestorage.googleapis.com/v0/b/taller-gdg.appspot.com/o/1_CIJ0LEa6ZR17GFZSjy2ceQ.png?alt=media&token=7662c4d2-863e-41ee-826d-13efef9204ea)
+![Logo](https://i.ibb.co/TkzPNnk/1-CIJ0-LEa6-ZR17-GFZSjy2ce-Q.png)
 
 
 #  Angular + Truffle = 💓 ÐAPPS
