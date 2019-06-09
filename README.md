@@ -1,7 +1,6 @@
 
 ![Logo](https://i.ibb.co/TkzPNnk/1-CIJ0-LEa6-ZR17-GFZSjy2ce-Q.png)
 
-
 #  Angular + Truffle = 💓 ÐAPPS
 This  Trufflebox provides a base for Truffle Framework and Angular DAPP. and you can make transactions between accounts and scale you app with beautiful material design 
 
