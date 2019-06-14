@@ -37,9 +37,9 @@ Run `ng generate component component-name` to generate a new component. You can 
   ```
 Note the mnemonic 12-word phrase printed on startup, you will need it later.
 
-4. Install the dependencies and Compile and migrate your contracts, into the directory blockchain
+4. Install the dependencies and Compile and migrate your contracts, into the directory Blockchain using :
   ```bash
-  npm install dotenv && npm install truffle-hdwallet-provider
+  npm install 
   ```
 5. Change the port  in truffle-config.js
  ```
