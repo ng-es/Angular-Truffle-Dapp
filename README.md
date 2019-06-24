@@ -1,7 +1,6 @@
 
 ![Logo](https://i.ibb.co/TkzPNnk/1-CIJ0-LEa6-ZR17-GFZSjy2ce-Q.png)
 
-
 #  Angular + Truffle = 💓 ÐAPPS
 This  Trufflebox provides a base for Truffle Framework and Angular DAPP. and you can make transactions between accounts and scale you app with beautiful material design 
 
@@ -38,9 +37,9 @@ Run `ng generate component component-name` to generate a new component. You can 
   ```
 Note the mnemonic 12-word phrase printed on startup, you will need it later.
 
-4. Install the dependencies and Compile and migrate your contracts, into the directory blockchain
+4. Install the dependencies and Compile and migrate your contracts, into the directory Blockchain using :
   ```bash
-  npm install dotenv && npm install truffle-hdwallet-provider
+  npm install 
   ```
 5. Change the port  in truffle-config.js
  ```

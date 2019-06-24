@@ -1,0 +1,23 @@
+{
+  "name": "contracts",
+  "version": "1.0.1",
+  "description": "Truflle eth dependencies",
+  "main": "truffle-config.js",
+  "author": {
+    "name": "@ng-es",
+    "url": "https://medium.com/ngesyfirebase"
+  },
+  "contributors": [
+    {
+      "name": "@AntonioCardenas"
+    },
+    {
+      "name": "@AbnerGarcia96"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "truffle-hdwallet-provider": "^1.0.10"
+  }
+}
