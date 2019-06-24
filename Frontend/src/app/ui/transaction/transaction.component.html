@@ -1,5 +1,5 @@
 <div class="body">
-  <mdc-card class="transaction" [mdcElevation]="2" *ngIf="compatible">
+  <mdc-card class="transaction" [mdcElevation]="2" *ngIf="balance !== undefined">
       &nbsp;
       <section class="header" style="text-align:center">
           <h4>Your address is:</h4>
@@ -31,7 +31,7 @@
       &nbsp;
   </mdc-card>
 
-  <mdc-card  [mdcElevation]="2" *ngIf="!compatible">
+  <mdc-card  [mdcElevation]="2" *ngIf="balance == undefined">
     <p>  We'are unable to detected metamask 🦊 or you wallet provider💳 ,Start your metamask or check your connection 😥
     </p>
   </mdc-card>

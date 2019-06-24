@@ -1,12 +1,20 @@
 <mdc-top-app-bar #demoappbar fixed [mdcElevation]="4" [fixedAdjustElement]="mainContent">
 	<mdc-top-app-bar-row>
-		<mdc-top-app-bar-section align="start" title="Angular Ðapp">
-      <button mdcIconButton mdcTopAppBarNavIcon icon="menu"  (click)="demoModal.open = !demoModal.open"></button>
+      <h1 style="align-content: center" *ngIf="resolution <= 599"> Angular Ðapp </h1>
+      <h1 style="align-content: start" *ngIf="resolution >= 600"> Angular Ðapp</h1>
+		<mdc-top-app-bar-section align="start">
+      <button mdcIconButton mdcTopAppBarNavIcon icon="menu"  (click)="demoModal.open = !demoModal.open" *ngIf="resolution >= 600"></button>
     </mdc-top-app-bar-section>
     <mdc-top-app-bar-section align="end">
-      <mdc-icon mdcTopAppBarActionItem routerLink="/account">person</mdc-icon>
-
+        <button mdc-button unelevated
+            routerLink="/account"  *ngIf="resolution >= 600 && account">
+            <img [src]="accountImage" class="profile" />
+            <span mdcButtonLabel>{{account}}...</span>
+        </button>
+      <mdc-icon *ngIf="resolution <= 599" routerLink="/account">person</mdc-icon>
+      <mdc-icon *ngIf="resolution >= 599 && !account" routerLink="/account">person</mdc-icon>
     </mdc-top-app-bar-section>
+
 	</mdc-top-app-bar-row>
 </mdc-top-app-bar>
 <div class="main" #mainContent>

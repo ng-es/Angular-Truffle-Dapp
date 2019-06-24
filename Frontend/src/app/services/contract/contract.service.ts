@@ -20,9 +20,10 @@ export class ContractService {
   public accountsObservable = new Subject<string[]>();
 
   constructor(private snackbar: MdcSnackbar) {
-    if (typeof window.web3 !== 'undefined') {
-      this.web3Provider = window.web3.currentProvider;
-      this.compatible = true;
+    if (typeof window.web3 === 'undefined' || (typeof window.ethereum !== 'undefined')) {
+      this.web3Provider = window.ethereum || window.web3;
+      console.log(this.web3Provider);
+      window.web3 = new Web3(this.web3Provider);
     } else {
       this.web3Provider = new Web3.providers.HttpProvider('HTTP://127.0.0.1:7545');
       // if you are using linix or ganche cli maybe the port is  http://localhost:8545
@@ -30,8 +31,6 @@ export class ContractService {
       //   this.web3Provider = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/Private_key'));
       // Change with your credentials as the test network and private key in infura.io
        }
-    window.web3 = new Web3(this.web3Provider);
-    console.log ('connect');
      }
 
 
