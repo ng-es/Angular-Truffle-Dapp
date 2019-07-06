@@ -25,7 +25,7 @@ export class ContractService {
       console.log(this.web3Provider);
       window.web3 = new Web3(this.web3Provider);
     } else {
-      this.web3Provider = new Web3.providers.HttpProvider('HTTP://127.0.0.1:7545');
+      this.web3Provider = new Web3(new Web3.providers.HttpProvider('HTTP://127.0.0.1:7545'));
       // if you are using linix or ganche cli maybe the port is  http://localhost:8545
       //   Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
       //   this.web3Provider = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/Private_key'));
