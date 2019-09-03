@@ -315,7 +315,7 @@ body {
 .demo-fab-extended-shape-radius {
   @include mdc-fab-extended-shape-radius(25%);
 }
-.shrine-logo {
+.logos {
   width: 90px;
   height: 90px;
   fill: $mdc-theme-primary;
@@ -353,4 +353,29 @@ body {
 }
 .custom-snackbar--label-ink-color {
   @include mdc-snackbar-label-ink-color($material-color-grey-50);
+}
+
+.mdc-tab {
+  @include mdc-tab-text-label-color(white);
+  @include mdc-tab-icon-color(white);
+}
+
+.mdc-tab-bar {
+  margin-top: 1em;
+  @media (max-width: 599px) {
+    margin-top: 0.5em;
+  }
+
+  .mdc-tab__ripple {
+    @include mdc-states($material-color-brown-900);
+  }
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color(white);
+    @include mdc-tab-indicator-underline-height(3px);
+  }
+}
+
+.custom-snackbar--fill-color {
+  @include mdc-snackbar-fill-color($material-color-red-500);
 }
