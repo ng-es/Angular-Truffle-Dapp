@@ -1,8 +1,6 @@
-#  Angular + Truffle = 💓 ÐAPPS
-This  Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts
+# Angulartruffledapp
 
-
-This  was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 ## Development server
 
@@ -14,35 +12,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-1. Install truffle, Angular CLI and an Ethereum client. If you don't have a test environment 
-  ```bash
-  npm install -g truffle
-  npm install -g @angular/cli
-  npm install -g ganache-cli
-  ```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-2. Download the box.
-  ```bash
-  truffle unbox Quintor/angular-truffle-box
-  ```
+## Running unit tests
 
-3. Run your Ethereum client. For Ganache CLI:
-  ```bash
-  ganache-cli
-  ```
-Note the mnemonic 12-word phrase printed on startup, you will need it later.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-4. Compile and migrate your contracts.
-  ```bash
-  truffle compile && truffle migrate
-  ```
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-* __Common errors and their solutions__
+## Further help
 
-| Error | Solution |
-|-------|----------|
-| `Module not found: Error: Can't resolve '../../../../build/contracts/Payment.json'` during `ng serve` | Run `truffle compile` |
-| `Error: the tx doesn't have the correct nonce.` in MetaMask | Reset MetaMask: Settings -> Reset Account |
-| `Error getting balance; see log.` in UI, with `Error: MetaCoin has not been deployed to detected network (network/artifact mismatch)` in browser console | Ensure you have started ganache, run `truffle migrate` and configured MetaMask to point to ganache | `Error: i cannot see my account or balance` Ensure you are logged in metamask and refresh | If you have a custom rcp in ganache you can change the dir in `src/app/contract/contract.service.ts line21 with the your dir `|
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
