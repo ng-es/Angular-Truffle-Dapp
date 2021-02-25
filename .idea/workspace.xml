@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b5d1fd-d02e-49e1-af53-803fa0db2634" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/src/app/ui/ui.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/app-material.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/ui.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/ui.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +87,16 @@
       <option name="presentableId" value="Default" />
       <updated>1614189765651</updated>
       <workItem from="1614189773648" duration="934000" />
-      <workItem from="1614192412813" duration="3641000" />
+      <workItem from="1614192412813" duration="9080000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: add components &amp; routing">
+      <created>1614200269063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614200269063</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +113,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add components &amp; routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add components &amp; routing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
