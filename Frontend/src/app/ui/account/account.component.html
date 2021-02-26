@@ -1,5 +1,6 @@
-<div class="body" *ngIf="direction !== undefined">
+<div class="body">
   <mat-card class="account">
+    <button mat-raised-button color="accent" class="big-round-shape-button" (click)="connectAccount()"> Get Account</button>
 
     <div style="text-align:center">
       <section class="header">
@@ -9,7 +10,6 @@
         <img [src]="data" class="profile" />
         <h4>Your address is:</h4>
         <h6>{{ direction }} </h6>
-        <mat-list-divider></mat-list-divider>
         <h4>Balance:</h4>
         <h5>{{balance}} ETH</h5>
       </section>

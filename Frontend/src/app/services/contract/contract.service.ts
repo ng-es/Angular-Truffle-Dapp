@@ -17,19 +17,19 @@ declare let window: any;
 
 export class ContractService {
   private readonly web3Provider: null;
-  private accounts: string[];
   public accountsObservable = new Subject<string[]>();
   public compatible: boolean;
   web3Modal;
   web3js;
   provider;
+  accounts;
 
   constructor(private snackbar: MatSnackBar) {
     const providerOptions = {
       walletconnect: {
         package: WalletConnectProvider, // required
         options: {
-          infuraId: "INFURA_ID" // required
+          infuraId: "27e484dcd9e3efcfd25a83a78777cdf1" // required
         }
       }
     };
@@ -47,12 +47,15 @@ export class ContractService {
       }
     });
   }
+
+
   async connectAccount() {
+    console.log('gatos');
     this.provider = await this.web3Modal.connect(); // set provider
     this.web3js = new Web3(this.provider); // create web3 instance
     this.accounts = await this.web3js.eth.getAccounts();
-    return this.accounts;
     console.log(this.accounts);
+    return this.accounts;
   }
 
   seeAccountInfo() {

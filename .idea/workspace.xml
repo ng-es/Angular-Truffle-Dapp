@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b5d1fd-d02e-49e1-af53-803fa0db2634" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/src/app/services/identicon.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/contract/contract.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/contract/contract.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/account/account.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/account/account.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/account/account.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/account/account.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/account/account.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/account/account.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,7 @@
       <updated>1614189765651</updated>
       <workItem from="1614189773648" duration="934000" />
       <workItem from="1614192412813" duration="11258000" />
-      <workItem from="1614295570393" duration="7879000" />
+      <workItem from="1614295570393" duration="9711000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add components &amp; routing">
       <created>1614200269063</created>
@@ -105,7 +99,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614301204703</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add account improvements">
+      <created>1614318163807</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614318163808</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add account improvements">
+      <created>1614318238109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614318238109</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
