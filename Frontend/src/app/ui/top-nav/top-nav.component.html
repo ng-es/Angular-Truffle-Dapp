@@ -4,8 +4,19 @@
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar-row>
+      <span>Angular + Truffle = 💓ÐAPP</span>
+    </mat-toolbar-row>
     <mat-nav-list>
-      <a *ngFor="let item of menuItems" mat-list-item [routerLink]="'/'+item"> {{item | titlecase}} </a>
+      <mat-list-item [routerLink]="['/home']">
+        <mat-icon>home</mat-icon>
+        Home
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/money']">
+        <mat-icon>money</mat-icon>
+        Transactions
+      </mat-list-item>
+
     </mat-nav-list>
   </mat-sidenav>
  <mat-sidenav-content>
@@ -18,10 +29,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <div fxLayout="row" fxFill fxLayoutAlign="space-between center">
         <span>Angular Ðapp</span>
-      </div>
-
+      <span class="example-spacer"></span>
+      <button mat-icon-button [routerLink]="['/account']">
+        <mat-icon>person</mat-icon>
+      </button>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

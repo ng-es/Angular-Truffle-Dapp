@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c6b5d1fd-d02e-49e1-af53-803fa0db2634" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/home/home.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/ui/top-nav/top-nav.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +40,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Frontend/src/assets" />
       <recent name="$PROJECT_DIR$/Frontend/src/app/services/contract" />
       <recent name="$PROJECT_DIR$/Frontend/src/app/ui" />
     </key>
@@ -80,7 +84,8 @@
       <option name="presentableId" value="Default" />
       <updated>1614189765651</updated>
       <workItem from="1614189773648" duration="934000" />
-      <workItem from="1614192412813" duration="10659000" />
+      <workItem from="1614192412813" duration="11258000" />
+      <workItem from="1614295570393" duration="3933000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add components &amp; routing">
       <created>1614200269063</created>
@@ -116,7 +121,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Frontend/src/app/ui/ui.module.ts</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
