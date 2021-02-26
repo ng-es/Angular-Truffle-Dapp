@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import contract from 'truffle-contract';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject } from 'rxjs';
+
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 declare let require: any;
 const Web3 = require('web3');
@@ -17,18 +20,39 @@ export class ContractService {
   private accounts: string[];
   public accountsObservable = new Subject<string[]>();
   public compatible: boolean;
+  web3Modal;
+  web3js;
+  provider;
 
   constructor(private snackbar: MatSnackBar) {
-    if (typeof window.web3 === 'undefined' || (typeof window.ethereum !== 'undefined')) {
-      this.web3Provider = window.ethereum || window.web3;
-      window.web3 = new Web3(this.web3Provider);
-    } else {
-      this.web3Provider = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
-      // if you are using linux or ganache cli maybe the port is  http://localhost:8545
-      //   Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
-      //   this.web3Provider = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/Private_key'));
-      // Change with your credentials as the test network and private key in infura.io
-    }
+    const providerOptions = {
+      walletconnect: {
+        package: WalletConnectProvider, // required
+        options: {
+          infuraId: "INFURA_ID" // required
+        }
+      }
+    };
+
+    this.web3Modal = new Web3Modal({
+      network: "mainnet", // optional
+      cacheProvider: true, // optional
+      providerOptions, // required
+      theme: {
+        background: "rgb(39, 49, 56)",
+        main: "rgb(199, 199, 199)",
+        secondary: "rgb(136, 136, 136)",
+        border: "rgba(195, 195, 195, 0.14)",
+        hover: "rgb(16, 26, 32)"
+      }
+    });
+  }
+  async connectAccount() {
+    this.provider = await this.web3Modal.connect(); // set provider
+    this.web3js = new Web3(this.provider); // create web3 instance
+    this.accounts = await this.web3js.eth.getAccounts();
+    return this.accounts;
+    console.log(this.accounts);
   }
 
   seeAccountInfo() {
