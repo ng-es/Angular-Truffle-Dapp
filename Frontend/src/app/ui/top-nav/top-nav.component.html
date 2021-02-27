@@ -1,53 +1,40 @@
-<mdc-top-app-bar #demoappbar fixed [mdcElevation]="4" [fixedAdjustElement]="mainContent">
-	<mdc-top-app-bar-row>
-      <h1 style="align-content: center" *ngIf="resolution <= 599"> Angular Ðapp </h1>
-      <h1 style="align-content: start" *ngIf="resolution >= 600"> Angular Ðapp</h1>
-		<mdc-top-app-bar-section align="start">
-      <button mdcIconButton mdcTopAppBarNavIcon icon="menu"  (click)="demoModal.open = !demoModal.open" *ngIf="resolution >= 600"></button>
-    </mdc-top-app-bar-section>
-    <mdc-top-app-bar-section align="end">
-        <button mdc-button unelevated
-            routerLink="/account"  *ngIf="resolution >= 600 && account">
-            <img [src]="accountImage" class="profile" />
-            <span mdcButtonLabel>{{account}}...</span>
-        </button>
-      <mdc-icon *ngIf="resolution <= 599" routerLink="/account">person</mdc-icon>
-      <mdc-icon *ngIf="resolution >= 599 && !account" routerLink="/account">person</mdc-icon>
-    </mdc-top-app-bar-section>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar-row>
+      <span>Angular + Truffle = 💓ÐAPP</span>
+    </mat-toolbar-row>
+    <mat-nav-list>
+      <mat-list-item [routerLink]="['/home']">
+        <mat-icon>home</mat-icon>
+        Home
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/money']">
+        <mat-icon>money</mat-icon>
+        Transactions
+      </mat-list-item>
 
-  </mdc-top-app-bar-row>
-  <mdc-top-app-bar-row *ngIf="resolution <= 599">
-    <mdc-top-app-bar-section>
-      <mdc-tab-bar fixed align="center" [activeTabIndex]="-1">
-        <mdc-tab-scroller>
-          <mdc-tab label="Home" routerLink="/home"  routerLinkActive="mdc-tab-indicator--active"></mdc-tab>
-          <mdc-tab label="Money" routerLink="/money" routerLinkActive="mdc-tab-indicator--active"></mdc-tab>
-        </mdc-tab-scroller>
-      </mdc-tab-bar>
-    </mdc-top-app-bar-section>
-  </mdc-top-app-bar-row>
-</mdc-top-app-bar>
-<div class="main" #mainContent>
-  <div class="content">
-    <div class="layout__row--no-wrap demo-drawer-app">
-      <mdc-drawer drawer="modal" #demoModal>
-        <mdc-drawer-header>
-          <h3 mdcDrawerTitle>Angular + Truffle = 💓 ÐAPP</h3>
-          <h6 mdcDrawerSubtitle>Scale like a pro!</h6>
-        </mdc-drawer-header>
-        <mdc-drawer-content>
-          <mdc-list useActivatedClass>
-              <a mdc-list-item routerLink="/home" routerLinkActive="mdc-list-item--activated">
-                <mdc-icon mdcListItemGraphic>favorite</mdc-icon>Home
-              </a>
-
-              <a mdc-list-item routerLink="/money" routerLinkActive="mdc-list-item--activated">
-                <mdc-icon mdcListItemGraphic>money</mdc-icon>Transaction
-              </a>
-          </mdc-list>
-        </mdc-drawer-content>
-      </mdc-drawer>
-    </div>
-  </div>
-</div>
-
+    </mat-nav-list>
+  </mat-sidenav>
+ <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+        <span>Angular Ðapp</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button [routerLink]="['/account']">
+        <mat-icon>person</mat-icon>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
   GiveStar() {
     window.open('https://github.com/ng-es/Angular-Truffle-Dapp');
