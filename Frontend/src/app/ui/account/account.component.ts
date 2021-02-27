@@ -34,12 +34,21 @@ export class AccountComponent {
     this.contract.connectAccount().then((value: any) => {
       console.log(value);
       this.direction = value;
-      this.balance = value.balance;
+      this.getDetails(this.direction);
       this.getImage();
+    }).catch((error: any) => {
+      this.contract.failure('Could\'t get the account data, please check if metamask is running correctly and refresh the page');
+    });
+  }
+
+
+  getDetails(account){
+    this.contract.accountInfo(account).then((value:any) => {
+      this.balance = value;
       console.log(value);
     }).catch((error: any) => {
       this.contract.failure('Could\'t get the account data, please check if metamask is running correctly and refresh the page');
     });
-
   }
+
 }

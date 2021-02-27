@@ -25,6 +25,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,7 +84,8 @@
       <updated>1614189765651</updated>
       <workItem from="1614189773648" duration="934000" />
       <workItem from="1614192412813" duration="11258000" />
-      <workItem from="1614295570393" duration="9711000" />
+      <workItem from="1614295570393" duration="10964000" />
+      <workItem from="1614387987357" duration="7333000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add components &amp; routing">
       <created>1614200269063</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614318238109</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: account handling">
+      <created>1614320423496</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614320423496</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +144,8 @@
     <MESSAGE value="feat: add components &amp; routing" />
     <MESSAGE value="feat: add home component" />
     <MESSAGE value="feat: add account improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add account improvements" />
+    <MESSAGE value="fix: account handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: account handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

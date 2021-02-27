@@ -23,6 +23,7 @@ export class ContractService {
   web3js;
   provider;
   accounts;
+  balance;
 
   constructor(private snackbar: MatSnackBar) {
     const providerOptions = {
@@ -50,63 +51,17 @@ export class ContractService {
 
 
   async connectAccount() {
-    console.log('gatos');
     this.provider = await this.web3Modal.connect(); // set provider
     this.web3js = new Web3(this.provider); // create web3 instance
     this.accounts = await this.web3js.eth.getAccounts();
-    console.log(this.accounts);
     return this.accounts;
   }
 
-  seeAccountInfo() {
-    return new Promise((resolve, reject) => {
-      window.web3.eth.getCoinbase((err, account) => {
-        if (account === true) {
-          console.log('dont work' + account);
-          return reject({ name: 'account' });
-        } else {
-          window.web3.eth.getBalance(account, (error, balance) => {
-            if (error === null) {
-              return resolve({
-                originAccount: account,
-                balance: (window.web3.utils.fromWei(balance, 'ether'))
-              });
-            } else {
-              console.log(balance);
-              return reject({ name: 'balance' });
-            }
-          });
-        }
-      });
-    });
+  async accountInfo(accounts){
+    this.balance = await this.web3js.eth.getBalance(accounts[0]);
+    return this.balance;
   }
 
-  refreshAccounts() {
-
-    window.web3.eth.getAccounts((err, accs) => {
-      console.log('Refreshing accounts');
-      if (err === true) {
-        console.warn('There was an error fetching your accounts.');
-        console.log(err, accs);
-        return;
-      }
-
-      // Get the initial account balance so it can be displayed.
-      if (accs.length === 0) {
-        console.warn('Couldn\'t get any accounts! Make sure your Ethereum client is configured correctly.');
-        return;
-      }
-
-      if (!this.accounts || this.accounts.length !== accs.length || this.accounts[0] !== accs[0]) {
-        console.log('Observed new accounts');
-
-        this.accountsObservable.next(accs);
-        this.accounts = accs;
-      }
-
-      console.log('ready');
-    });
-  }
 
   trasnferEther(originAccount, destinyAccount, amount) {
     const that = this;
