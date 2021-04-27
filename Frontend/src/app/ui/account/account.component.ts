@@ -18,11 +18,13 @@ export class AccountComponent {
 
   }
 
-  getImage() {
+  getImage(account) {
+    console.warn('llamo');
     this.data = this.sanitizer.bypassSecurityTrustResourceUrl((
       'data:image/svg+xml; utf8,'
-      + encodeURI(new Identicon(Md5.hashStr(this.direction), {size: 32, format: 'svg'}).toString(true))
+      + encodeURI(new Identicon(Md5.hashStr(account), {size: 32, format: 'svg'}).toString(true))
     ));
+    console.log(this.data);
   }
 
   navigateTo() {
@@ -30,12 +32,10 @@ export class AccountComponent {
   }
 
   connectAccount() {
-    console.warn('dio');
     this.contract.connectAccount().then((value: any) => {
       console.log(value);
       this.direction = value;
       this.getDetails(this.direction);
-      this.getImage();
     }).catch((error: any) => {
       this.contract.failure('Could\'t get the account data, please check if metamask is running correctly and refresh the page');
     });
@@ -45,7 +45,7 @@ export class AccountComponent {
   getDetails(account){
     this.contract.accountInfo(account).then((value:any) => {
       this.balance = value;
-      console.log(value);
+      this.getImage(account);
     }).catch((error: any) => {
       this.contract.failure('Could\'t get the account data, please check if metamask is running correctly and refresh the page');
     });

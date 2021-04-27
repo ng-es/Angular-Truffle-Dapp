@@ -1,1 +1,21 @@
-<p>transaction works!</p>
+<div class="body">
+  
+    <mat-card class="account">
+        <form [formGroup]="transactionForm" (ngSubmit)="sendEth()"> 
+            <mat-form-field appearance="outline">
+                <mat-label>Destination Account</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>account_balance_wallet</mat-icon>
+                <mat-hint>Hint</mat-hint>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>attach_money</mat-icon>
+                <mat-hint>Hint</mat-hint>
+              </mat-form-field>
+        </form>
+                   
+    </mat-card>
+  </div>
+  

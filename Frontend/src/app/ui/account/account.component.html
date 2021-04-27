@@ -1,7 +1,5 @@
 <div class="body">
-  <mat-card class="account">
-    <button mat-raised-button color="accent" class="big-round-shape-button" (click)="connectAccount()"> Get Account</button>
-
+  <mat-card class="account" *ngIf="direction !== undefined">
     <div style="text-align:center">
       <section class="header">
         <img [src]="data" class="profile" />
@@ -14,22 +12,14 @@
 
   </mat-card>
 </div>
-<div class="body">
+<div class="body" *ngIf="direction == undefined">
+
   <mat-card class="account">
 
     <div style="text-align:center">
       <section class="header">
-
-        <h3>Web3 enabled browser and secure wallet required.</h3>
-        <h4>Please check if metamask is running correctly and refresh the page</h4>
-        <h5>In order to use Angular Truffle Dapp, please install a secure wallet such as MetaMask.</h5>
-        <mat-list-divider></mat-list-divider>
-        &nbsp;
-
-        <div class="button-container">
-          &nbsp;
-          <button mat-raised-button color="accent" class="big-round-shape-button" (click)="navigateTo()"> Get MetaMask</button>
-        </div>
+        <h3> Click connect account to connect the wallet provider </h3>
+        <button mat-raised-button color="accent" class="big-round-shape-button" (click)="connectAccount()"> Connect Account</button>
         &nbsp;
       </section>
     </div>
