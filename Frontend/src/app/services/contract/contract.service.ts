@@ -58,7 +58,8 @@ export class ContractService {
   }
 
   async accountInfo(accounts){
-    this.balance = await this.web3js.eth.getBalance(accounts[0]);
+    const initialvalue = await this.web3js.eth.getBalance(accounts[0]);
+    this.balance = this.web3js.utils.fromWei(initialvalue , 'ether');
     return this.balance;
   }
 

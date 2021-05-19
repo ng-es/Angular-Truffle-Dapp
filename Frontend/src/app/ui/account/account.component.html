@@ -2,11 +2,16 @@
   <mat-card class="account" *ngIf="direction !== undefined">
     <div style="text-align:center">
       <section class="header">
-        <img [src]="data" class="profile" />
+        <!--
+        <img *ngIf="!url" [src]="data" class="profile" />
+        <img  *ngIf="url"src='https://ipfs.infura.io/ipfs/{{ url }}'class="profileInfura" />
+       <h4 *ngIf="profile"> Welcome {{ profile.name }}   </h4>
+       <h6 *ngIf="profile">{{ profile.emoji }}</h6> 
+        -->
         <h4>Your address is:</h4>
         <h6>{{ direction }} </h6>
         <h4>Balance:</h4>
-        <h5>{{balance}} ETH</h5>
+        <h5>{{ balance }} ETH</h5>
       </section>
     </div>
 

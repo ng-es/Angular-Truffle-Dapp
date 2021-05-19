@@ -15,7 +15,9 @@ import { AppMaterialModule } from "../app-material.module";
 import { UiRoute} from "./ui.routes";
 import { RouterModule} from "@angular/router";
 
-
+// Services
+import { ContractService } from "../services/contract/contract.service";
+import { ThreeBox } from "../services/3box.service"
 
 @NgModule({
   declarations: [
@@ -35,6 +37,9 @@ import { RouterModule} from "@angular/router";
     TopNavComponent,
     HomeComponent
   ],
-  providers: [],
+  providers: [
+    ContractService,
+    ThreeBox
+  ],
 })
 export class UiModule { }

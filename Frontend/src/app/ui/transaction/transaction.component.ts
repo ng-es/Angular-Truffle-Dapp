@@ -26,6 +26,7 @@ export class TransactionComponent implements OnInit {
 
 
   sendEth(){
+    // this.contract.trasnferEther()
     
   }
 }
