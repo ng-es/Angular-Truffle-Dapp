@@ -1,7 +1,7 @@
 <div class="body">
   
     <mat-card class="account">
-        <form [formGroup]="transactionForm" (ngSubmit)="sendEth()"> 
+        <form [formGroup]="transactionForm" (ngSubmit)="sendEth($event)"> 
             <mat-form-field appearance="outline">
                 <mat-label>Destination Account</mat-label>
                 <input matInput placeholder="Placeholder">
@@ -11,12 +11,17 @@
               &nbsp;
               <mat-form-field appearance="outline">
                 <mat-label>Amount</mat-label>
-                <input matInput placeholder="Placeholder">
+                <input matInput type="number" min=0 placeholder="Placeholder">
                 <mat-icon matSuffix>attach_money</mat-icon>
                 <mat-hint></mat-hint>
               </mat-form-field>
         </form>
-                   
+        &nbsp;
+        <div class="button-container">
+          <button mat-raised-button color="accent" [disabled]="!transactionForm.valid" (click)="sendEth($event)"><mat-icon *ngIf="!transactionForm.valid">lock</mat-icon><mat-icon *ngIf="transactionForm.valid">input</mat-icon>&nbsp;Transfer Ether</button>
+          &nbsp;
+        </div>
+        &nbsp;       
     </mat-card>
   </div>
   

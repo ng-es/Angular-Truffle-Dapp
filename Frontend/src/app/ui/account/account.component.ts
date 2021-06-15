@@ -25,7 +25,6 @@ export class AccountComponent {
     this.contract
       .connectAccount()
       .then((value: any) => {
-        console.log(value);
         this.direction = value;
         this.getDetails(this.direction);
        /* this.profile = this.threebox.getProfile(this.direction).then((response) => {
